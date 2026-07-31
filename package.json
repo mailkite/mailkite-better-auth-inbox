@@ -1,0 +1,55 @@
+{
+  "name": "@mailkite/better-auth-inbox",
+  "version": "0.4.0",
+  "description": "Give a Better Auth app a real mailbox — receive email as signature-verified webhooks, list and read messages, and reply, scoped per user or per organization.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "better-auth": ">=1.0.0"
+  },
+  "devDependencies": {
+    "better-auth": "^1.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "better-auth",
+    "better-auth-plugin",
+    "mailkite",
+    "email",
+    "inbound",
+    "inbox",
+    "webhook",
+    "receive-email",
+    "nextjs"
+  ],
+  "homepage": "https://mailkite.dev/docs/auth/better-auth-inbox",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mailkite/mailkite-better-auth-inbox.git"
+  },
+  "license": "MIT"
+}
